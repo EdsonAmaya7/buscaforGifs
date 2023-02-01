@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GifsService } from 'src/app/gifs/services/gifs.service';
 
 @Component({
@@ -14,4 +14,7 @@ export class SidebarComponent {
 
   constructor(private gifsService: GifsService) { }
 
+  buscarGif(gif: string) {
+    this.gifsService.buscarGifs(gif)
+  }
 }
